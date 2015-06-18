@@ -1,4 +1,10 @@
 // Code goes here
+//import deps here, much easier (and works with bundling)
+// doing generic import just adds to the window (which is what we want....)
+import 'zone.js';
+import 'es6-shim';
+import 'reflect-metadata'
+
 import {
 bootstrap,
 View,
