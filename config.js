@@ -1,16 +1,11 @@
 System.config({
   "baseURL": "/",
   "defaultJSExtensions": true,
-  "transpiler": "traceur",
-  "typescriptOptions": {
-    "module": "commonjs",
+  "transpiler": "typescript",
+  "typescriptOptions":{
+    "module":"commonjs",
     "emitDecoratorMetadata": true
   },
-          traceurOptions: {
-          annotations: true,
-          types: true,
-          memberVariables: true
-        },
   "paths": {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*",
@@ -30,7 +25,6 @@ System.config({
     "bootstrap-material": "github:fezVrasta/bootstrap-material-design@0.3.0",
     "es6-shim": "github:es-shims/es6-shim@0.32.1",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
-    "traceur": "github:jmcriffey/bower-traceur@0.0.90",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
     "github:fezVrasta/bootstrap-material-design@0.3.0": {
       "css": "github:systemjs/plugin-css@0.1.12",
