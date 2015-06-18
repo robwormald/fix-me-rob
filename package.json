@@ -1,0 +1,16 @@
+{
+  "jspm": {
+    "directories": {},
+    "dependencies": {
+      "Microsoft/TypeScript": "github:Microsoft/TypeScript@^1.5.0-beta",
+      "angular2": "npm:angular2@^2.0.0-alpha.27",
+      "bootstrap-material": "github:fezVrasta/bootstrap-material-design@^0.3.0",
+      "es6-shim": "github:es-shims/es6-shim@^0.32.1",
+      "reflect-metadata": "npm:reflect-metadata@^0.1.0",
+      "traceur": "github:jmcriffey/bower-traceur@^0.0.90"
+    },
+    "devDependencies": {
+      "typescript": "github:mhegazy/typescript@v1.5-beta2"
+    }
+  }
+}
