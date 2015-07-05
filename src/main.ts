@@ -20,8 +20,9 @@ NgZone
 
 import {
 routerInjectables,
-routerDirectives} from 'angular2/router'
+routerDirectives} from 'angular2/router';
 
+import {TestService} from './TestService'
 
 @Component({
     selector: 'test-app',
@@ -35,13 +36,12 @@ routerDirectives} from 'angular2/router'
 })
 class App {
     data: any;
-    constructor(http: Http) {
+    constructor(testService: TestService) {
         
-        console.log(http)
+       
         this.data = {};
 
-        http.get('foo.json')
-            .toRx()
+       testService.load()
             .map(res => res.json())
             .subscribe(data => {
                 this.data = data;
@@ -51,4 +51,4 @@ class App {
     }
 }
 
-bootstrap(App, [httpInjectables]).catch(err => console.log(err));
+bootstrap(App, [httpInjectables, TestService]).catch(err => console.log(err));
