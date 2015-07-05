@@ -1,9 +1,14 @@
 System.config({
   "baseURL": "/",
   "defaultJSExtensions": true,
-  "transpiler": "typescript",
-  "typescriptOptions":{
-    "module":"commonjs",
+  "transpiler": "traceur",
+  "traceurOptions": {
+    "annotations": true,
+    "types": true,
+    "memberVariables": true
+  },
+  "typescriptOptions": {
+    "module": "commonjs",
     "emitDecoratorMetadata": true
   },
   "paths": {
@@ -21,11 +26,14 @@ System.config({
 
 System.config({
   "map": {
-    "angular2": "npm:angular2@2.0.0-alpha.27",
+    "angular2": "npm:angular2@2.0.0-alpha.29",
     "bootstrap-material": "github:fezVrasta/bootstrap-material-design@0.3.0",
-    "es6-shim": "github:es-shims/es6-shim@0.32.1",
+    "es6-shim": "github:es-shims/es6-shim@0.32.2",
     "reflect-metadata": "npm:reflect-metadata@0.1.0",
+    "traceur": "github:jmcriffey/bower-traceur@0.0.90",
+    "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.90",
     "typescript": "github:mhegazy/typescript@v1.5-beta2",
+    "zone.js": "npm:zone.js@0.5.1",
     "github:fezVrasta/bootstrap-material-design@0.3.0": {
       "css": "github:systemjs/plugin-css@0.1.12",
       "jquery": "github:components/jquery@2.1.4"
@@ -79,7 +87,7 @@ System.config({
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
-    "npm:angular2@2.0.0-alpha.27": {
+    "npm:angular2@2.0.0-alpha.29": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1",
